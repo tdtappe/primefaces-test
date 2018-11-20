@@ -13,6 +13,16 @@
         <h1>#{testView.testString}</h1>
 
         <h1>#{testViewCdi.testString}</h1>
+        
+        <p:commandButton id="testButton" value="TEST" />
+		<p:overlayPanel id="testOverlay" for="testButton" modal="true" showCloseIcon="true">
+			<div style="height: 400px; background-color: green;">
+			OVERLAY
+			</div>
+		</p:overlayPanel>
+		<div style="height:800px; background-color: red;">
+			TEST
+		</div>
 
     </h:body>
 </html>
