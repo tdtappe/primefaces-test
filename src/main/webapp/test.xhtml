@@ -23,6 +23,15 @@
 		<div style="height:800px; background-color: red;">
 			TEST
 		</div>
+		
+		<div style="position: fixed; bottom: 2px;">
+	        <p:commandButton id="testButtonBottom" value="BOTTOM-TEST" />
+			<p:overlayPanel id="testOverlayBottom" for="testButtonBottom" modal="true" showCloseIcon="true">
+				<div style="height: 400px; background-color: green;">
+				OVERLAY BOTTOM
+				</div>
+			</p:overlayPanel>
+		</div>
 
     </h:body>
 </html>
