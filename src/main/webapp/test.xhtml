@@ -11,8 +11,17 @@
     <h:body>
 
         <h1>#{testView.testString}</h1>
-
-        <h1>#{testViewCdi.testString}</h1>
+        
+        <h:form id="mainform">
+        <p:ajaxStatus onstart="console.log('onstart')" onsuccess="console.log('onsuccess')" />
+        
+        <p:commandButton id="actionButton" value="Do something 2" action="#{testView.doSomething}" update=":mainform" />
+        
+        <p:outputPanel id="deferred" deferred="true">
+        	<h:outputText value="#{testView.slowData}" />
+        </p:outputPanel>
+        
+        </h:form>
 
     </h:body>
 </html>
